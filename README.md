@@ -352,7 +352,7 @@ Para criar um **template de lançamento** para sua instância EC2, siga os passo
    - **VPC:** Selecione a **VPC** criada anteriormente (wp-docker).
    - **Network settings:** Marque a opção **Do not include in launch template**, pois a configuração de rede será definida no Auto Scaling Group posteriormente.
 7. **Seleção de Security Group:**
-   - **Security Group:** Selecione o grupo de segurança criado para o servidor de aplicação, `applicationServer-SG`.
+   - **Security Group:** Selecione o grupo de segurança criado para o servidor de aplicação, `Server-SecurityGroup`.
 8. **Detalhes avançados:**
    - **IAM Instance Profile:** Selecione o perfil IAM da instância, como **EC2-SSM-Role**, configurado anteriormente para permitir o uso do Systems Manager.
    - **User Data:** Insira o script necessário para instalar o Docker, Docker Compose, e configurar os contêineres para o WordPress e MySQL utilizando o Docker Compose.
@@ -493,7 +493,7 @@ Este passo a passo mantém a clareza e a organização, explicando cada uma das 
      - Escolha a mesma VPC que você configurou anteriormente para garantir que o Load Balancer e as instâncias EC2 estejam na mesma rede.
    - **Availability Zones**: Selecione as duas zonas de disponibilidade e suas sub-redes públicas
      - Isso garante que o Load Balancer distribua o tráfego entre diferentes zonas de disponibilidade, aumentando a disponibilidade e a redundância.
-   - **Security Groups**: Selecione o Security Group `ApplicationLoadBalancer-SG`
+   - **Security Groups**: Selecione o Security Group `LoadBalancer-SecurityGroup`
      - O Security Group controla o tráfego de rede. Certifique-se de usar o grupo de segurança adequado para o Load Balancer.
 
 4. **Em Listeners and routing, selecione o grupo de destino `wordpress-tg` que você criou anteriormente.**
