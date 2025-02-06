@@ -120,7 +120,7 @@ Com essa configuração concluída, podemos avançar para a **criação da inst�
    - **HTTP (Port 80):** Permite tráfego de qualquer origem (0.0.0.0/0) para o seu balanceador de carga.
    - **HTTPS (Port 443):** Permite tráfego de qualquer origem (0.0.0.0/0) para o seu balanceador de carga.
 6. Defina as regras de saída (Outbound Rules):
-   - **All traffic:** Permite tráfego de saída para qualquer destino (0.0.0.0/0).
+   - **All traffic:** Permite tráfego de saída para Server-SecurityGroup destino (0.0.0.0/0).
 7. Clique em **Create**.
 
 ### Por que usar este SG?
